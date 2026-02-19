@@ -88,7 +88,7 @@ print(classification_report(y_test, y_pred))
 print("\nROC-AUC Score:")
 print(roc_auc_score(y_test, y_pred_prob))
 #save model.
-model.save("arrhythmia_model.h5")
+model.save("arrhythmia_model.keras")
 print("\nModel saved successfully!")
 
 
