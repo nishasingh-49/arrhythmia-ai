@@ -31,6 +31,9 @@ print("Test size:", len(X_test))
 #normalization.
 scaler = StandardScaler()
 X_train = scaler.fit_transform(X_train)
+import joblib
+joblib.dump(scaler, "scaler.pkl")
+print("Scaler saved successfully!")
 X_test = scaler.transform(X_test)
 #reshapind for cnn
 X_train = X_train.reshape(-1, X_train.shape[1], 1)
